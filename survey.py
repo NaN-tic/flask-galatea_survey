@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, current_app, abort, g, \
-    url_for, request, session
+    url_for, request, session, flash
 from galatea.tryton import tryton
 from flask.ext.babel import gettext as _, lazy_gettext
 from flask.ext.paginate import Pagination
@@ -143,6 +143,9 @@ def survey_detail(lang, slug):
                     breadcrumbs=breadcrumbs,
                     survey=survey,
                     )
+        else:
+            flash(_('An error occured when save data. Not send form. ' \
+                'Repeat or contact us'), 'danger')
 
     return render_template('survey.html',
             breadcrumbs=breadcrumbs,
