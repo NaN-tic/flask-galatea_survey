@@ -135,7 +135,7 @@ def survey_detail(lang, slug):
         for k, v in request.form.iteritems():
             if k not in SURVEY_EXCLUDE_DATA:
                 data[k] = v
-        result = survey.save_data(data)
+        result = Survey.save_data(survey, data)
 
         if result:
             # ok. render thanks template
