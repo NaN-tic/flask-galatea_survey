@@ -17,7 +17,7 @@ LIMIT = current_app.config.get('TRYTON_PAGINATION_SURVEY_LIMIT', 20)
 
 Survey = tryton.pool.get('survey.survey')
 
-SURVEY_FIELD_NAMES = ['name', 'code', 'slug']
+SURVEY_FIELD_NAMES = ['name', 'code', 'slug', 'esale_description']
 SURVEY_EXCLUDE_DATA = ['csrf_token']
 
 
