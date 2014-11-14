@@ -7,6 +7,7 @@ from flask.ext.wtf import Form
 from wtforms import BooleanField, DateField, DateTimeField, FloatField, \
     IntegerField, SelectField, TextAreaField, TextField, PasswordField, \
     validators
+from htmlmin.decorator import htmlmin
 
 survey = Blueprint('survey', __name__, template_folder='templates')
 
@@ -39,6 +40,7 @@ class BaseForm(Form):
 
 @survey.route("/<slug>", methods=["GET", "POST"], endpoint="survey")
 @tryton.transaction()
+@htmlmin
 def survey_detail(lang, slug):
     '''Survey Detail'''
 
