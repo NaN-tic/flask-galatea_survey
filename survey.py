@@ -125,7 +125,7 @@ def survey_detail(lang, slug):
 
     breadcrumbs = [{
         'slug': url_for('.surveys', lang=g.language),
-        'name': _('Surveys'),
+        'name': _('Forms'),
         }, {
         'slug': url_for('.survey', lang=g.language, slug=survey.slug),
         'name': survey.name,
@@ -192,7 +192,7 @@ def survey_list(lang):
     #breadcumbs
     breadcrumbs = [{
         'slug': url_for('.surveys', lang=g.language),
-        'name': _('Surveys'),
+        'name': _('Forms'),
         }]
 
     return render_template('surveys.html',
