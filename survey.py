@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, current_app, abort, g, \
     url_for, request, session, flash
 from galatea.tryton import tryton
-from flask.ext.babel import gettext as _, lazy_gettext
-from flask.ext.paginate import Pagination
-from flask.ext.wtf import Form
+from flask_babel import gettext as _, lazy_gettext
+from flask_paginate import Pagination
+from flask_wtf import Form
 from wtforms import BooleanField, DateField, DateTimeField, FloatField, \
     IntegerField, SelectField, TextAreaField, TextField, PasswordField, \
     validators
